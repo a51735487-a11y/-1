@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c20">
+  <title>Звёздный ловец — маленькое космическое приключение</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='50'%3E✦%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Звёздный ловец, главная"><span class="brand-icon">✦</span> STAR CATCHER</a>
+    <span class="header-label"><span class="online-dot"></span> ТВОЯ МАЛЕНЬКАЯ КОСМИЧЕСКАЯ ПАУЗА</span>
+    <span class="orbit-label">ОРБИТА 001 <span>→</span></span>
+  </header>
+  <main class="layout">
+    <section class="intro" aria-labelledby="title">
+      <div class="eyebrow"><span></span> МИНИ-ИГРА · БОЛЬШОЙ КОСМОС</div>
+      <h1 id="title">Звёздный<br><span>ловец.</span></h1>
+      <p class="lead">Поймай немного космоса.<br>И побей свой собственный рекорд.</p>
+      <div class="mission">
+        <span class="mission-icon" aria-hidden="true">✧</span>
+        <div><h2>Твоя миссия</h2><p>Управляй кораблём, собирай падающие звёзды и оставайся на орбите как можно дольше.</p></div>
+      </div>
+      <div class="instructions">
+        <div><span class="instruction-symbol gold" aria-hidden="true">✦</span><p><strong>Лови звёзды</strong><span>Одна звезда — одно очко</span></p><span class="instruction-number">01</span></div>
+        <div><span class="instruction-symbol pink" aria-hidden="true">♡</span><p><strong>Береги три жизни</strong><span>Пропустишь звезду — потеряешь одну</span></p><span class="instruction-number">02</span></div>
+        <div><span class="instruction-symbol cyan" aria-hidden="true">→</span><p><strong>Почувствуй скорость</strong><span>Каждые 5 очков космос ускоряется</span></p><span class="instruction-number">03</span></div>
+      </div>
+      <div class="controls-note"><span class="keys"><kbd>←</kbd><kbd>→</kbd></span><span>Стрелки, мышь или касание.<br><strong>Выбирай, как тебе удобнее.</strong></span></div>
+      <div class="intro-footer"><span class="tiny-star">✦</span> НИКУДА НЕ СПЕШИ. КРОМЕ КАК ЗА ЗВЁЗДАМИ.</div>
+    </section>
+    <section class="game-section" aria-label="Игровая станция">
+      <div class="station-header"><span><span class="online-dot"></span> ИГРОВАЯ СТАНЦИЯ</span><span class="station-id">SC—001</span></div>
+      <div class="stats">
+        <div class="stat"><span class="stat-label">СЧЁТ</span><strong id="score">00</strong></div>
+        <div class="stat lives-stat"><span class="stat-label">ЖИЗНИ</span><strong id="lives" aria-label="3 жизни">♥ ♥ ♥</strong></div>
+        <div class="stat"><span class="stat-label">✧ РЕКОРД</span><strong id="best">00</strong></div>
+      </div>
+      <div class="playfield" id="playfield">
+        <canvas id="game" width="480" height="640" tabindex="0" aria-label="Поле игры. Перемещайте корабль стрелками, мышью или касанием.">Для игры нужен браузер с поддержкой Canvas.</canvas>
+        <div class="game-overlay" id="overlay">
+          <div class="launch-symbol" aria-hidden="true">✦</div>
+          <span class="overlay-eyebrow" id="overlay-label">КОСМОС ЖДЁТ ТЕБЯ</span>
+          <h2 id="overlay-title">Готов к полёту?</h2>
+          <p id="message" role="status">Звёзды уже на пути.<br>Осталось только поймать их.</p>
+          <button id="start" type="button"><span id="start-label">Играть</span><span aria-hidden="true">→</span></button>
+          <span class="overlay-hint" id="overlay-hint">ТРИ ЖИЗНИ · БЕСКОНЕЧНЫЙ КОСМОС</span>
+        </div>
+        <span class="field-corner top-left" aria-hidden="true"></span><span class="field-corner bottom-right" aria-hidden="true"></span>
+        <div class="field-bottom" aria-hidden="true"><span>SECTOR 07</span><span>✧ DEEP SPACE</span></div>
+      </div>
+      <div class="station-footer"><span>✧ <span id="flight-status">Все системы готовы</span></span><span>РЕКОРД СОХРАНЯЕТСЯ АВТОМАТИЧЕСКИ</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>СОЗДАНО ДЛЯ МАЛЕНЬКИХ ПЕРЕРЫВОВ</span><span>ЗЕМЛЯ МОЖЕТ ПОДОЖДАТЬ <span class="footer-star">✦</span></span></footer>
+</body>
+</html>
